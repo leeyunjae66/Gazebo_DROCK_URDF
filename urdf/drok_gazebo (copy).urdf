@@ -1,0 +1,288 @@
+<robot name="DROK_CK">
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-0.27677 -0.00012736 -0.081738" rpy="0 0 0" />
+      <mass value="20.9" />
+      <inertia ixx="0.05744" ixy="3.2271E-06" ixz="0.0042212" iyy="0.24804" iyz="1.3488E-06" izz="0.28457" />
+    </inertial>
+    <visual>
+       <origin xyz="0.12 0.25 -0.2" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="file:///home/ams7725/yunjae/Gazebo/DROK_CK/src/drok_gazebo/meshes/base_link.stl" />
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="FR">
+    <inertial>
+      <origin xyz="8.0574E-10 -7.7716E-16 -2.5789E-10" rpy="0 0 0" />
+      <mass value="0.60008" />
+      <inertia ixx="0.00086593" ixy="-6.1208E-14" ixz="2.3771E-12" iyy="0.0017267" iyz="6.4802E-13" izz="0.00086593" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/ams7725/yunjae/Gazebo/DROK_CK/src/drok_gazebo/meshes/FR.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.095" length="0.035"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="FR_JOINT" type="continuous">
+    <origin xyz="0.005 -0.1836 -0.096" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="FR" />
+    <axis xyz="0 -1 0" />
+  </joint>
+
+  <link name="FL">
+    <inertial>
+      <origin xyz="1.8068E-10 -1.471E-15 -8.8518E-10" rpy="0 0 0" />
+      <mass value="0.60008" />
+      <inertia ixx="0.00086593" ixy="3.5253E-13" ixz="-1.0066E-12" iyy="0.0017267" iyz="4.6273E-13" izz="0.00086593" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/ams7725/yunjae/Gazebo/DROK_CK/src/drok_gazebo/meshes/FL.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.095" length="0.035"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="FL_JOINT" type="continuous">
+    <origin xyz="0.005 0.1836 -0.096" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="FL" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <link name="BR">
+    <inertial>
+      <origin xyz="-1.8068E-10 1.4988E-15 -8.8518E-10" rpy="0 0 0" />
+      <mass value="0.60008" />
+      <inertia ixx="0.00086593" ixy="3.5253E-13" ixz="1.0066E-12" iyy="0.0017267" iyz="-4.6273E-13" izz="0.00086593" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/ams7725/yunjae/Gazebo/DROK_CK/src/drok_gazebo/meshes/BR.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.095" length="0.035"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="BR_JOINT" type="continuous">
+    <origin xyz="-0.545 -0.1836 -0.096" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="BR" />
+    <axis xyz="0 -1 0" />
+  </joint>
+
+  <link name="BL">
+    <inertial>
+      <origin xyz="-8.0574E-10 8.1879E-16 -2.5789E-10" rpy="0 0 0" />
+      <mass value="0.60008" />
+      <inertia ixx="0.00086593" ixy="-6.1207E-14" ixz="-2.3771E-12" iyy="0.0017267" iyz="-6.4802E-13" izz="0.00086593" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/ams7725/yunjae/Gazebo/DROK_CK/src/drok_gazebo/meshes/BL.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.095" length="0.035"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="BL_JOINT" type="continuous">
+    <origin xyz="-0.545 0.1836 -0.096" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="BL" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <link name="FRF">
+    <inertial>
+      <origin xyz="0.083282 -0.0023321 0.043617" rpy="0 0 0" />
+      <mass value="2.6446" />
+      <inertia ixx="0.0026208" ixy="3.9073E-07" ixz="-0.0015913" iyy="0.0072646" iyz="2.1007E-07" izz="0.004847" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/ams7725/yunjae/Gazebo/DROK_CK/src/drok_gazebo/meshes/FRF.stl" />
+      </geometry>
+    </visual>
+    <collision>
+     <origin xyz="0.0866 0 0.05" rpy="0 -0.5236 0" />
+     <geometry>
+       <box size="0.35 0.035 0.12" />
+     </geometry>
+    </collision>
+  </link>
+
+  <joint name="FRF_joint" type="revolute">
+    <origin xyz="0.005 -0.2306 -0.096" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="FRF" />
+    <axis xyz="0 -1 0" />
+    <limit lower="0" upper="0" effort="30.0" velocity="2.0" />
+  </joint>
+
+  <link name="FLF">
+    <inertial>
+      <origin xyz="0.083471 0.0023321 0.043631" rpy="0 0 0" />
+      <mass value="2.6446" />
+      <inertia ixx="0.0026208" ixy="-3.898E-07" ixz="-0.0015911" iyy="0.0072646" iyz="-2.3759E-07" izz="0.004847" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/ams7725/yunjae/Gazebo/DROK_CK/src/drok_gazebo/meshes/FLF.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0866 0 0.05" rpy="0 -0.5236 0" />
+      <geometry>
+        <box size="0.35 0.035 0.12" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="FLF_joint" type="revolute">
+    <origin xyz="0.005 0.2306 -0.096" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="FLF" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="0" effort="30.0" velocity="2.0" />
+  </joint>
+
+  <link name="BRF">
+    <inertial>
+      <origin xyz="-0.056521 -0.0023321 0.075125" rpy="0 0 0" />
+      <mass value="2.6446" />
+      <inertia ixx="0.0042804" ixy="-2.7054E-07" ixz="0.0018635" iyy="0.0072646" iyz="3.5158E-07" izz="0.0031875" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/ams7725/yunjae/Gazebo/DROK_CK/src/drok_gazebo/meshes/BRF.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.0643 0 0.0766" rpy="0 0.8727 0" />
+      <geometry>
+        <box size="0.35 0.035 0.12" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="BRF_joint" type="revolute">
+    <origin xyz="-0.545 -0.2306 -0.096" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="BRF" />
+    <axis xyz="0 -1 0" />
+    <limit lower="0" upper="0" effort="30.0" velocity="2.0" />
+  </joint>
+
+  <link name="BLF">
+    <inertial>
+      <origin xyz="-0.056565 0.0023321 0.075309" rpy="0 0 0" />
+      <mass value="2.6446" />
+      <inertia ixx="0.0042804" ixy="2.9755E-07" ixz="0.0018633" iyy="0.0072646" iyz="-3.4621E-07" izz="0.0031874" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/ams7725/yunjae/Gazebo/DROK_CK/src/drok_gazebo/meshes/BLF.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.0643 0 0.0766" rpy="0 0.8727 0" />
+      <geometry>
+        <box size="0.35 0.035 0.12" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="BLF_joint" type="revolute">
+    <origin xyz="-0.545 0.2306 -0.096" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="BLF" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="0" effort="30.0" velocity="2.0" />
+  </joint>
+  
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+
+    <!-- Right Front wheel -->
+    <joint name="FR_JOINT">
+      <command_interface name="velocity">
+        <param name="min">-20.0</param>
+        <param name="max">20.0</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <!-- Left Front wheel -->
+    <joint name="FL_JOINT">
+      <command_interface name="velocity">
+        <param name="min">-20.0</param>
+        <param name="max">20.0</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <!-- Right Back wheel -->
+    <joint name="BR_JOINT">
+      <command_interface name="velocity">
+        <param name="min">-20.0</param>
+        <param name="max">20.0</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <!-- Left Back wheel -->
+    <joint name="BL_JOINT">
+      <command_interface name="velocity">
+        <param name="min">-20.0</param>
+        <param name="max">20.0</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
+  <!-- Gazebo ros2_control plugin -->
+  <gazebo>
+    <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+      <parameters>/home/ams7725/yunjae/ros2_ws/install/gazebo_control/share/gazebo_control/config/controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
+</robot>
