@@ -3,7 +3,7 @@ import os
 from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
+from launch.actions import IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 
@@ -63,6 +63,7 @@ def generate_launch_description():
     )
 
     # URDF 모델 Gazebo에 spawn
+    # 플리퍼 초기각도는 따로 지정하지 않음
     spawn_robot = Node(
         package='gazebo_ros',
         executable='spawn_entity.py',
@@ -74,9 +75,56 @@ def generate_launch_description():
         output='screen'
     )
 
+    # joint_state_broadcaster 자동 활성화
+    joint_state_broadcaster_spawner = Node(
+        package='controller_manager',
+        executable='spawner',
+        arguments=[
+            'joint_state_broadcaster',
+            '--controller-manager',
+            '/controller_manager'
+        ],
+        output='screen'
+    )
+
+    # 궤도 바퀴 velocity controller 자동 활성화
+    track_velocity_controller_spawner = Node(
+        package='controller_manager',
+        executable='spawner',
+        arguments=[
+            'track_velocity_controller',
+            '--controller-manager',
+            '/controller_manager'
+        ],
+        output='screen'
+    )
+
+    # 플리퍼 position controller 자동 활성화
+    flipper_position_controller_spawner = Node(
+        package='controller_manager',
+        executable='spawner',
+        arguments=[
+            'flipper_position_controller',
+            '--controller-manager',
+            '/controller_manager'
+        ],
+        output='screen'
+    )
+
+    # Gazebo에 로봇이 spawn되고 gazebo_ros2_control/controller_manager가 뜬 뒤 controller들을 켬
+    delayed_controller_spawners = TimerAction(
+        period=7.0,
+        actions=[
+            joint_state_broadcaster_spawner,
+            track_velocity_controller_spawner,
+            flipper_position_controller_spawner,
+        ]
+    )
+
     return LaunchDescription([
         gazebo,
         robot_state_publisher,
         static_tf,
         spawn_robot,
+        delayed_controller_spawners,
     ])
