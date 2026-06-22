@@ -6,7 +6,11 @@ find_package(ament_cmake REQUIRED)
 
 # config, launch, meshes, urdf 폴더 안의 모든 파일을 share 공간으로 복사
 install(
-  DIRECTORY config launch meshes urdf
+  DIRECTORY
+    launch
+    urdf
+    meshes
+    worlds
   DESTINATION share/${PROJECT_NAME}
 )
 

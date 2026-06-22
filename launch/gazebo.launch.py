@@ -25,17 +25,26 @@ def generate_launch_description():
         'drok_gazebo.urdf'
     )
 
-    # URDF 파일 내용을 읽어서 robot_state_publisher에 robot_description으로 전달
+    world_file = os.path.join(
+        pkg_drok_gazebo,
+        'worlds',
+        'flipper_test.world'
+    )
+
+    # URDF 파일 내용을 robot_state_publisher에 전달
     with open(urdf_file, 'r') as infp:
         robot_description = infp.read()
 
-    # Gazebo empty world 실행
+    # Gazebo 실행
     gazebo = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(gazebo_launch)
+        PythonLaunchDescriptionSource(gazebo_launch),
+        launch_arguments={
+            'world': world_file,
+            'verbose': 'true'
+        }.items()
     )
 
-    # robot_state_publisher 실행
-    # gazebo_ros2_control이 여기서 robot_description을 받아감
+    # TF / robot_description 발행
     robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
@@ -49,33 +58,41 @@ def generate_launch_description():
         ]
     )
 
-    # static TF: base_link -> base_footprint
+    # base_link -> base_footprint static TF
     static_tf = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
         name='tf_footprint_base',
         arguments=[
-            '0', '0', '0',
-            '0', '0', '0',
-            'base_link',
-            'base_footprint'
-        ]
+            '--x', '0',
+            '--y', '0',
+            '--z', '0',
+            '--roll', '0',
+            '--pitch', '0',
+            '--yaw', '0',
+            '--frame-id', 'base_link',
+            '--child-frame-id', 'base_footprint'
+        ],
+        output='screen'
     )
 
-    # URDF 모델 Gazebo에 spawn
-    # 플리퍼 초기각도는 따로 지정하지 않음
+    # Gazebo에 로봇 spawn
     spawn_robot = Node(
         package='gazebo_ros',
         executable='spawn_entity.py',
         name='spawn_model',
         arguments=[
             '-file', urdf_file,
-            '-entity', 'drok_gazebo'
+            '-entity', 'drok_gazebo',
+            '-x', '0.0',
+            '-y', '0.0',
+            '-z', '0.25',
+            '-Y', '0.0'
         ],
         output='screen'
     )
 
-    # joint_state_broadcaster 자동 활성화
+    # joint_states 발행
     joint_state_broadcaster_spawner = Node(
         package='controller_manager',
         executable='spawner',
@@ -87,19 +104,7 @@ def generate_launch_description():
         output='screen'
     )
 
-    # 궤도 바퀴 velocity controller 자동 활성화
-    track_velocity_controller_spawner = Node(
-        package='controller_manager',
-        executable='spawner',
-        arguments=[
-            'track_velocity_controller',
-            '--controller-manager',
-            '/controller_manager'
-        ],
-        output='screen'
-    )
-
-    # 플리퍼 position controller 자동 활성화
+    # 플리퍼 effort trajectory controller
     flipper_position_controller_spawner = Node(
         package='controller_manager',
         executable='spawner',
@@ -111,12 +116,11 @@ def generate_launch_description():
         output='screen'
     )
 
-    # Gazebo에 로봇이 spawn되고 gazebo_ros2_control/controller_manager가 뜬 뒤 controller들을 켬
+    # Gazebo spawn 및 gazebo_ros2_control 초기화 후 controller 실행
     delayed_controller_spawners = TimerAction(
         period=7.0,
         actions=[
             joint_state_broadcaster_spawner,
-            track_velocity_controller_spawner,
             flipper_position_controller_spawner,
         ]
     )

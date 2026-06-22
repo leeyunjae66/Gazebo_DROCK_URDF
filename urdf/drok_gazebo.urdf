@@ -1,11 +1,9 @@
 <robot name="DROK_CK">
-
   <link name="base_link">
     <inertial>
       <origin xyz="-0.27677 -0.00012736 -0.081738" rpy="0 0 0" />
       <mass value="20.9" />
-      <inertia ixx="0.05744" ixy="3.2271E-06" ixz="0.0042212"
-               iyy="0.24804" iyz="1.3488E-06" izz="0.28457" />
+      <inertia ixx="0.05744" ixy="3.2271E-06" ixz="0.0042212" iyy="0.24804" iyz="1.3488E-06" izz="0.28457" />
     </inertial>
     <visual>
       <origin xyz="0.12 0.25 -0.2" rpy="1.5708 0 -1.5708" />
@@ -19,8 +17,7 @@
     <inertial>
       <origin xyz="8.0574E-10 -7.7716E-16 -2.5789E-10" rpy="0 0 0" />
       <mass value="0.60008" />
-      <inertia ixx="0.00086593" ixy="-6.1208E-14" ixz="2.3771E-12"
-               iyy="0.0017267" iyz="6.4802E-13" izz="0.00086593" />
+      <inertia ixx="0.00086593" ixy="-6.1208E-14" ixz="2.3771E-12" iyy="0.0017267" iyz="6.4802E-13" izz="0.00086593" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -28,12 +25,6 @@
         <mesh filename="file:///home/ams7725/yunjae/Gazebo/DROK_CK/src/drok_gazebo/meshes/FR.stl" />
       </geometry>
     </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="1.5708 0 0" />
-      <geometry>
-        <cylinder radius="0.105" length="0.035" />
-      </geometry>
-    </collision>
   </link>
 
   <joint name="FR_JOINT" type="continuous">
@@ -47,8 +38,7 @@
     <inertial>
       <origin xyz="1.8068E-10 -1.471E-15 -8.8518E-10" rpy="0 0 0" />
       <mass value="0.60008" />
-      <inertia ixx="0.00086593" ixy="3.5253E-13" ixz="-1.0066E-12"
-               iyy="0.0017267" iyz="4.6273E-13" izz="0.00086593" />
+      <inertia ixx="0.00086593" ixy="3.5253E-13" ixz="-1.0066E-12" iyy="0.0017267" iyz="4.6273E-13" izz="0.00086593" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -56,12 +46,6 @@
         <mesh filename="file:///home/ams7725/yunjae/Gazebo/DROK_CK/src/drok_gazebo/meshes/FL.stl" />
       </geometry>
     </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="1.5708 0 0" />
-      <geometry>
-        <cylinder radius="0.105" length="0.035" />
-      </geometry>
-    </collision>
   </link>
 
   <joint name="FL_JOINT" type="continuous">
@@ -75,8 +59,7 @@
     <inertial>
       <origin xyz="-1.8068E-10 1.4988E-15 -8.8518E-10" rpy="0 0 0" />
       <mass value="0.60008" />
-      <inertia ixx="0.00086593" ixy="3.5253E-13" ixz="1.0066E-12"
-               iyy="0.0017267" iyz="-4.6273E-13" izz="0.00086593" />
+      <inertia ixx="0.00086593" ixy="3.5253E-13" ixz="1.0066E-12" iyy="0.0017267" iyz="-4.6273E-13" izz="0.00086593" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -84,12 +67,6 @@
         <mesh filename="file:///home/ams7725/yunjae/Gazebo/DROK_CK/src/drok_gazebo/meshes/BR.stl" />
       </geometry>
     </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="1.5708 0 0" />
-      <geometry>
-        <cylinder radius="0.105" length="0.035" />
-      </geometry>
-    </collision>
   </link>
 
   <joint name="BR_JOINT" type="continuous">
@@ -103,8 +80,7 @@
     <inertial>
       <origin xyz="-8.0574E-10 8.1879E-16 -2.5789E-10" rpy="0 0 0" />
       <mass value="0.60008" />
-      <inertia ixx="0.00086593" ixy="-6.1207E-14" ixz="-2.3771E-12"
-               iyy="0.0017267" iyz="-6.4802E-13" izz="0.00086593" />
+      <inertia ixx="0.00086593" ixy="-6.1207E-14" ixz="-2.3771E-12" iyy="0.0017267" iyz="-6.4802E-13" izz="0.00086593" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -112,12 +88,6 @@
         <mesh filename="file:///home/ams7725/yunjae/Gazebo/DROK_CK/src/drok_gazebo/meshes/BL.stl" />
       </geometry>
     </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="1.5708 0 0" />
-      <geometry>
-        <cylinder radius="0.105" length="0.035" />
-      </geometry>
-    </collision>
   </link>
 
   <joint name="BL_JOINT" type="continuous">
@@ -127,12 +97,75 @@
     <axis xyz="0 1 0" />
   </joint>
 
+  <link name="left_track">
+    <inertial>
+      <origin xyz="-0.27 0 -0.185" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="0.000342" ixy="0" ixz="0" iyy="0.047008" iyz="0" izz="0.047083" />
+    </inertial>
+    <collision>
+      <origin xyz="-0.27 0 -0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.45 0.05 0.04" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.005 0 -0.096" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.05" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.545 0 -0.096" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.05" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="left_track_joint" type="fixed">
+    <origin xyz="0 0.1836 0" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="left_track" />
+  </joint>
+
+  <link name="right_track">
+    <inertial>
+      <origin xyz="-0.27 0 -0.185" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="0.000342" ixy="0" ixz="0" iyy="0.047008" iyz="0" izz="0.047083" />
+    </inertial>
+    <collision>
+      <origin xyz="-0.27 0 -0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.45 0.05 0.04" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.005 0 -0.096" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.05" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.545 0 -0.096" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.05" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="right_track_joint" type="fixed">
+    <origin xyz="0 -0.1836 0" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="right_track" />
+  </joint>
+
   <link name="FRF">
     <inertial>
       <origin xyz="0.083282 -0.0023321 0.043617" rpy="0 0 0" />
       <mass value="2.6446" />
-      <inertia ixx="0.0026208" ixy="3.9073E-07" ixz="-0.0015913"
-               iyy="0.0072646" iyz="2.1007E-07" izz="0.004847" />
+      <inertia ixx="0.0026208" ixy="3.9073E-07" ixz="-0.0015913" iyy="0.0072646" iyz="2.1007E-07" izz="0.004847" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -153,6 +186,7 @@
     <parent link="base_link" />
     <child link="FRF" />
     <axis xyz="0 -1 0" />
+    <dynamics damping="0.5" friction="0.02" />
     <limit lower="-1.57" upper="1.57" effort="30.0" velocity="2.0" />
   </joint>
 
@@ -160,8 +194,7 @@
     <inertial>
       <origin xyz="0.083471 0.0023321 0.043631" rpy="0 0 0" />
       <mass value="2.6446" />
-      <inertia ixx="0.0026208" ixy="-3.898E-07" ixz="-0.0015911"
-               iyy="0.0072646" iyz="-2.3759E-07" izz="0.004847" />
+      <inertia ixx="0.0026208" ixy="-3.898E-07" ixz="-0.0015911" iyy="0.0072646" iyz="-2.3759E-07" izz="0.004847" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -182,6 +215,7 @@
     <parent link="base_link" />
     <child link="FLF" />
     <axis xyz="0 1 0" />
+    <dynamics damping="0.5" friction="0.02" />
     <limit lower="-1.57" upper="1.57" effort="30.0" velocity="2.0" />
   </joint>
 
@@ -189,8 +223,7 @@
     <inertial>
       <origin xyz="-0.056521 -0.0023321 0.075125" rpy="0 0 0" />
       <mass value="2.6446" />
-      <inertia ixx="0.0042804" ixy="-2.7054E-07" ixz="0.0018635"
-               iyy="0.0072646" iyz="3.5158E-07" izz="0.0031875" />
+      <inertia ixx="0.0042804" ixy="-2.7054E-07" ixz="0.0018635" iyy="0.0072646" iyz="3.5158E-07" izz="0.0031875" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -211,6 +244,7 @@
     <parent link="base_link" />
     <child link="BRF" />
     <axis xyz="0 -1 0" />
+    <dynamics damping="0.5" friction="0.02" />
     <limit lower="-1.57" upper="1.57" effort="30.0" velocity="2.0" />
   </joint>
 
@@ -218,8 +252,7 @@
     <inertial>
       <origin xyz="-0.056565 0.0023321 0.075309" rpy="0 0 0" />
       <mass value="2.6446" />
-      <inertia ixx="0.0042804" ixy="2.9755E-07" ixz="0.0018633"
-               iyy="0.0072646" iyz="-3.4621E-07" izz="0.0031874" />
+      <inertia ixx="0.0042804" ixy="2.9755E-07" ixz="0.0018633" iyy="0.0072646" iyz="-3.4621E-07" izz="0.0031874" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -240,91 +273,70 @@
     <parent link="base_link" />
     <child link="BLF" />
     <axis xyz="0 1 0" />
+    <dynamics damping="0.5" friction="0.02" />
     <limit lower="-1.57" upper="1.57" effort="30.0" velocity="2.0" />
   </joint>
 
-  <gazebo reference="FR">
-    <mu1>2.0</mu1>
-    <mu2>0.08</mu2>
-    <fdir1>1 0 0</fdir1>
-    <slip1>0.02</slip1>
-    <slip2>0.05</slip2>
-    <kp>500000.0</kp>
-    <kd>20.0</kd>
-    <minDepth>0.005</minDepth>
-    <maxVel>0.1</maxVel>
+  <gazebo reference="left_track_joint">
+    <preserveFixedJoint>true</preserveFixedJoint>
   </gazebo>
 
-  <gazebo reference="FL">
-    <mu1>2.0</mu1>
-    <mu2>0.08</mu2>
-    <fdir1>1 0 0</fdir1>
-    <slip1>0.02</slip1>
-    <slip2>0.05</slip2>
-    <kp>500000.0</kp>
-    <kd>20.0</kd>
-    <minDepth>0.005</minDepth>
-    <maxVel>0.1</maxVel>
+  <gazebo reference="right_track_joint">
+    <preserveFixedJoint>true</preserveFixedJoint>
   </gazebo>
 
-  <gazebo reference="BR">
-    <mu1>2.0</mu1>
-    <mu2>0.08</mu2>
-    <fdir1>1 0 0</fdir1>
-    <slip1>0.02</slip1>
-    <slip2>0.05</slip2>
+  <gazebo reference="left_track">
     <kp>500000.0</kp>
-    <kd>20.0</kd>
-    <minDepth>0.005</minDepth>
-    <maxVel>0.1</maxVel>
+    <kd>100.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.02</maxVel>
+    <slip1>0.0</slip1>
+    <slip2>0.0</slip2>
   </gazebo>
 
-  <gazebo reference="BL">
-    <mu1>0.8</mu1>
-    <mu2>0.5</mu2>
-    <fdir1>1 0 0</fdir1>
-    <slip1>0.02</slip1>
-    <slip2>0.05</slip2>
+  <gazebo reference="right_track">
     <kp>500000.0</kp>
-    <kd>20.0</kd>
-    <minDepth>0.005</minDepth>
-    <maxVel>0.1</maxVel>
+    <kd>100.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.02</maxVel>
+    <slip1>0.0</slip1>
+    <slip2>0.0</slip2>
   </gazebo>
 
   <gazebo reference="FRF">
-    <mu1>1.5</mu1>
-    <mu2>1.5</mu2>
-    <kp>100000.0</kp>
-    <kd>100.0</kd>
-    <minDepth>0.005</minDepth>
-    <maxVel>0.1</maxVel>
+    <kp>200000.0</kp>
+    <kd>300.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.02</maxVel>
+    <slip1>0.0</slip1>
+    <slip2>0.0</slip2>
   </gazebo>
 
   <gazebo reference="FLF">
-    <mu1>1.5</mu1>
-    <mu2>1.5</mu2>
-    <kp>100000.0</kp>
-    <kd>100.0</kd>
-    <minDepth>0.005</minDepth>
-    <maxVel>0.1</maxVel>
+    <kp>200000.0</kp>
+    <kd>300.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.02</maxVel>
+    <slip1>0.0</slip1>
+    <slip2>0.0</slip2>
   </gazebo>
 
   <gazebo reference="BRF">
-    <mu1>1.5</mu1>
-    <mu2>1.5</mu2>
-    <kp>100000.0</kp>
-    <kd>100.0</kd>
-    <minDepth>0.005</minDepth>
-    <maxVel>0.1</maxVel>
+    <kp>200000.0</kp>
+    <kd>300.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.02</maxVel>
+    <slip1>0.0</slip1>
+    <slip2>0.0</slip2>
   </gazebo>
 
   <gazebo reference="BLF">
-    <mu1>1.5</mu1>
-    <mu2>1.5</mu2>
-    <kp>100000.0</kp>
-    <kd>100.0</kd>
-    <minDepth>0.005</minDepth>
-    <maxVel>0.1</maxVel>
+    <kp>200000.0</kp>
+    <kd>300.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.02</maxVel>
+    <slip1>0.0</slip1>
+    <slip2>0.0</slip2>
   </gazebo>
 
   <ros2_control name="GazeboSystem" type="system">
@@ -332,44 +344,8 @@
       <plugin>gazebo_ros2_control/GazeboSystem</plugin>
     </hardware>
 
-    <joint name="FR_JOINT">
-      <command_interface name="velocity">
-        <param name="min">-50.0</param>
-        <param name="max">50.0</param>
-      </command_interface>
-      <state_interface name="position" />
-      <state_interface name="velocity" />
-    </joint>
-
-    <joint name="FL_JOINT">
-      <command_interface name="velocity">
-        <param name="min">-50.0</param>
-        <param name="max">50.0</param>
-      </command_interface>
-      <state_interface name="position" />
-      <state_interface name="velocity" />
-    </joint>
-
-    <joint name="BR_JOINT">
-      <command_interface name="velocity">
-        <param name="min">-50.0</param>
-        <param name="max">50.0</param>
-      </command_interface>
-      <state_interface name="position" />
-      <state_interface name="velocity" />
-    </joint>
-
-    <joint name="BL_JOINT">
-      <command_interface name="velocity">
-        <param name="min">-50.0</param>
-        <param name="max">50.0</param>
-      </command_interface>
-      <state_interface name="position" />
-      <state_interface name="velocity" />
-    </joint>
-
     <joint name="FRF_joint">
-      <command_interface name="effort"> 
+      <command_interface name="effort">
         <param name="min">-30.0</param>
         <param name="max">30.0</param>
       </command_interface>
@@ -378,7 +354,7 @@
     </joint>
 
     <joint name="FLF_joint">
-      <command_interface name="effort"> 
+      <command_interface name="effort">
         <param name="min">-30.0</param>
         <param name="max">30.0</param>
       </command_interface>
@@ -387,7 +363,7 @@
     </joint>
 
     <joint name="BRF_joint">
-      <command_interface name="effort"> 
+      <command_interface name="effort">
         <param name="min">-30.0</param>
         <param name="max">30.0</param>
       </command_interface>
@@ -396,7 +372,7 @@
     </joint>
 
     <joint name="BLF_joint">
-      <command_interface name="effort"> 
+      <command_interface name="effort">
         <param name="min">-30.0</param>
         <param name="max">30.0</param>
       </command_interface>
@@ -406,9 +382,35 @@
   </ros2_control>
 
   <gazebo>
+    <plugin name="simple_tracked_vehicle" filename="libSimpleTrackedVehiclePlugin.so">
+      <body>base_link</body>
+
+      <left_track>left_track</left_track>
+      <right_track>right_track</right_track>
+
+      <left_flipper>FLF</left_flipper>
+      <left_flipper>BLF</left_flipper>
+
+      <right_flipper>FRF</right_flipper>
+      <right_flipper>BRF</right_flipper>
+
+      <robot_namespace>/drok_gazebo</robot_namespace>
+
+      <tracks_separation>0.3672</tracks_separation>
+
+      <steering_efficiency>0.75</steering_efficiency>
+
+      <max_linear_speed>2.0</max_linear_speed>
+      <max_angular_speed>6.0</max_angular_speed>
+
+      <track_mu>1.0</track_mu>
+      <track_mu2>0.5</track_mu2>
+
+      <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+    </plugin>
+
     <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
       <parameters>/home/ams7725/yunjae/ros2_ws/install/gazebo_control/share/gazebo_control/config/controllers.yaml</parameters>
     </plugin>
   </gazebo>
-
 </robot>
