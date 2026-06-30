@@ -1,0 +1,51 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ams7725/yunjae/Gazebo/DROK_CK/build/drok_gazebo
+-- Install configuration: ""
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/launch
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/launch/gazebo.launch.py
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/launch/display.launch
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/urdf
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/urdf/drok_gazebo.urdf
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/urdf/DROK CK.csv
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/meshes
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/meshes/BR.stl
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/meshes/BL.stl
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/meshes/FLF.stl
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/meshes/base_link.stl
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/meshes/FL.stl
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/meshes/BLF.stl
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/meshes/BRF.stl
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/meshes/FR.stl
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/meshes/FRF.stl
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/worlds
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/worlds/flipper_test.world
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/ament_index/resource_index/package_run_dependencies/drok_gazebo
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/ament_index/resource_index/parent_prefix_path/drok_gazebo
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/environment/ament_prefix_path.sh
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/environment/ament_prefix_path.dsv
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/environment/path.sh
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/environment/path.dsv
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/local_setup.bash
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/local_setup.sh
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/local_setup.zsh
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/local_setup.dsv
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/package.dsv
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/ament_index/resource_index/packages/drok_gazebo
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/cmake/drok_gazeboConfig.cmake
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/cmake/drok_gazeboConfig-version.cmake
+-- Installing: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/package.xml

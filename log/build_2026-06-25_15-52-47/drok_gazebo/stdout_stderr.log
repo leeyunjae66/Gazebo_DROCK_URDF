@@ -1,0 +1,36 @@
+-- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ams7725/yunjae/Gazebo/DROK_CK/build/drok_gazebo
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/launch/display.launch
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/launch/gazebo.launch.py
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/urdf/DROK CK.csv
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/urdf/drok_gazebo.urdf
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/meshes/BL.stl
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/meshes/BLF.stl
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/meshes/BR.stl
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/meshes/BRF.stl
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/meshes/FL.stl
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/meshes/FLF.stl
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/meshes/FR.stl
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/meshes/FRF.stl
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/meshes/base_link.stl
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/worlds/flipper_test.world
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/ament_index/resource_index/package_run_dependencies/drok_gazebo
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/ament_index/resource_index/parent_prefix_path/drok_gazebo
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/environment/ament_prefix_path.sh
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/environment/ament_prefix_path.dsv
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/environment/path.sh
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/environment/path.dsv
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/local_setup.bash
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/local_setup.sh
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/local_setup.zsh
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/local_setup.dsv
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/package.dsv
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/ament_index/resource_index/packages/drok_gazebo
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/cmake/drok_gazeboConfig.cmake
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/cmake/drok_gazeboConfig-version.cmake
+-- Symlinking: /home/ams7725/yunjae/Gazebo/DROK_CK/install/drok_gazebo/share/drok_gazebo/package.xml

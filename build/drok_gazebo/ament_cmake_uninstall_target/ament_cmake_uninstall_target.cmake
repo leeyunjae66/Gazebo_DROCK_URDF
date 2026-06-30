@@ -55,3 +55,6 @@ endforeach()
 message(STATUS "Execute custom uninstall script")
 
 # begin of custom uninstall code
+
+# uninstall files installed using the symlink install functions
+include("/home/ams7725/yunjae/Gazebo/DROK_CK/build/drok_gazebo/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")

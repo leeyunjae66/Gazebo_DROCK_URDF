@@ -1,2 +1,1 @@
-source;share/drok_gazebo/environment/ament_prefix_path.sh
-source;share/drok_gazebo/environment/path.sh
+/home/ams7725/yunjae/Gazebo/DROK_CK/build/drok_gazebo/ament_cmake_environment_hooks/local_setup.dsv
